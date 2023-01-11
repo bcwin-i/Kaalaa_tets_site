@@ -819,7 +819,8 @@ document.addEventListener("click", async (e) => {
               console.error(e);
             }
         } else {
-          qrmodalDisplay();
+          hideModal();
+          return qrmodalDisplay();
         }
       }
     }
