@@ -785,14 +785,22 @@ document.addEventListener("click", async (e) => {
         }
         if (isMobile) {
           if (navigator.userAgent.match(/Android/i)) {
-            window
-              .open(
-                `https://kalaa-client.vercel.app/?userId=${getCookie(
-                  "Kaalaa"
-                )}&callback=${window.location.href}`,
-                "_blank"
-              )
-              .focus();
+            // window
+            //   .open(
+            //     `https://kalaa-client.vercel.app/?userId=${getCookie(
+            //       "Kaalaa"
+            //     )}&callback=${window.location.href}`,
+            //     "_blank"
+            //   )
+            //   .focus();
+            popup(
+              `https://kaalaa-ios-pwa.vercel.app/campaign/?userId=${getCookie(
+                "Kaalaa"
+              )}`,
+              "Kaalaa",
+              "400",
+              "500"
+            );
           } else
             try {
               if (req.data.buffer.data) {
@@ -1133,3 +1141,17 @@ const shareToFaceBook = async function (image) {
     } else reject(false);
   });
 };
+
+// Iframe
+function IframePopup(mylink, windowname, w, h) {
+  if (!window.focus) return true;
+  var href;
+  if (typeof mylink == "string") href = mylink;
+  else href = mylink.href;
+  window.open(
+    href,
+    windowname,
+    "width=" + w + ",height=" + h + ",scrollbars=yes,toolbar=no"
+  );
+  return false;
+}
