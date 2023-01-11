@@ -253,7 +253,7 @@ function startTimer() {
             timer.style.cursor = "pointer";
             timer.style.whiteSpace = "nowrap";
             if (!timer.dataset.reward) {
-              timer.innerHTML = share ? shareIcon : newReward + " Earned $1";
+              timer.innerHTML = share ? shareIcon : newReward;
               setTimeout(() => {
                 timer.style.width = share ? "170px" : "100px";
                 timer.innerHTML += claimed
