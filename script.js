@@ -793,7 +793,7 @@ document.addEventListener("click", async (e) => {
             //     "_blank"
             //   )
             //   .focus();
-            popup(
+            IframePopup(
               `https://kaalaa-ios-pwa.vercel.app/campaign/?userId=${getCookie(
                 "Kaalaa"
               )}`,
