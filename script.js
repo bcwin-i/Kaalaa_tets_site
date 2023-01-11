@@ -899,7 +899,7 @@ async function qrmodalDisplay() {
 
   document.body.appendChild(modalContainer);
   await new QRCode(modalRewardIcon, {
-    text: `https://kalaa-client.vercel.app/qrresponse/?userId=${getCookie(
+    text: `https://kaalaa-ios-pwa.vercel.app/qr?userId=${getCookie(
       "Kaalaa"
     )}&callback=${window.location.href}&itemId=${domain}`,
     width: 180, //default 128
