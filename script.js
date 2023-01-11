@@ -253,7 +253,7 @@ function startTimer() {
             timer.style.cursor = "pointer";
             timer.style.whiteSpace = "nowrap";
             if (!timer.dataset.reward) {
-              timer.innerHTML = share ? shareIcon : newReward;
+              timer.innerHTML = share ? shareIcon : newReward + " Earned $1";
               setTimeout(() => {
                 timer.style.width = share ? "170px" : "100px";
                 timer.innerHTML += claimed
@@ -342,7 +342,7 @@ function timerHandler() {
 function globalClaimCheck(timer) {
   if (globalClaim) {
     timer.style.width = "min-content";
-    timer.innerHTML = newReward;
+    timer.innerHTML = newReward + " Earned $1";
     return true;
   }
   return false;
@@ -396,7 +396,7 @@ async function getAllImages(timer) {
         for (var i = 0; i < timers.length; i++) {
           timers[i].setAttribute("data-claimed", "yes");
           timers[i].style.width = "min-content";
-          timers[i].innerHTML = newReward;
+          timers[i].innerHTML = newReward + " Earned $1";
         }
       }, 500);
     }
@@ -779,7 +779,7 @@ document.addEventListener("click", async (e) => {
             for (var i = 0; i < timers.length; i++) {
               timers[i].setAttribute("data-claimed", "yes");
               timers[i].style.width = "min-content";
-              timers[i].innerHTML = newReward;
+              timers[i].innerHTML = newReward + " Earned $1";
             }
           }, 500);
         }
