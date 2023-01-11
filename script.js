@@ -818,6 +818,8 @@ document.addEventListener("click", async (e) => {
             } catch (e) {
               console.error(e);
             }
+        } else {
+          qrmodalDisplay();
         }
       }
     }
@@ -887,8 +889,7 @@ async function qrmodalDisplay() {
   closeRewardIcon.innerHTML = closeModal;
 
   const modalDesc = document.createElement("p");
-  modalDesc.innerHTML =
-    "Scan the QR code with your smartphone camera to get 1$.";
+  modalDesc.innerHTML = "Scan the QR code with your smartphone view reward";
   modalDesc.className = "modal-desc";
 
   modalContentWrapper.appendChild(modalRewardIcon);
