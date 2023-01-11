@@ -341,7 +341,7 @@ function timerHandler() {
 
 function globalClaimCheck(timer) {
   if (globalClaim) {
-    timer.style.width = "min-content";
+    timer.style.width = "100px";
     timer.innerHTML = newReward + " Earned $1";
     return true;
   }
@@ -395,7 +395,7 @@ async function getAllImages(timer) {
       setTimeout(() => {
         for (var i = 0; i < timers.length; i++) {
           timers[i].setAttribute("data-claimed", "yes");
-          timers[i].style.width = "min-content";
+          timers[i].style.width = "100px";
           timers[i].innerHTML = newReward + " Earned $1";
         }
       }, 500);
